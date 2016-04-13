@@ -33,6 +33,12 @@ function runTests (singleRun, done) {
     preprocessors[path] = ['ng-html2js'];
   });
 
+<% if (props.jsPreprocessor.key === 'typescript') { -%>
+  pathSrcJs.forEach(function(path) {
+    preprocessors[path] = ['sourcemap'];
+  });
+<% } -%>
+
   if (singleRun) {
     pathSrcJs.forEach(function(path) {
       preprocessors[path] = ['coverage'];

@@ -103,6 +103,9 @@ module.exports = function(config) {
       'karma-phantomjs-shim',
       'karma-coverage',
       'karma-jasmine',
+<% if (props.jsPreprocessor.key === 'typescript') { -%>
+      'karma-sourcemap-loader',
+<% } -%>
       'karma-ng-html2js-preprocessor'
     ],
 
