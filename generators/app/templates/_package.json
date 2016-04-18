@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "dependencies": {},
   "scripts": {
+<% if (props.jsPreprocessor.key === 'typescript') { -%>
+    "postinstall": "typings install",
+<% } -%>
     "test": "gulp test"
   },
   "devDependencies": {
