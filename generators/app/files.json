@@ -10,9 +10,13 @@
 
     "gulpfile.js",
     "gulp/.eslintrc",
+    "gulp/multimocks.js",
 
     "src/favicon.ico",
-    "src/assets/images/yeoman.png"
+    "src/assets/images/yeoman.png",
+
+    "src/app/mocks/mockResources.json",
+    "src/app/mocks/example/_default.json"
   ],
   "templates": [
     ".gitignore",
@@ -24,6 +28,8 @@
 
     "karma.conf.js",
     "protractor.conf.js",
+
+    "README.md",
 
     "e2e/main.spec.js",
     "e2e/main.po.js",

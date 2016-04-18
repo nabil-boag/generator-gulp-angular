@@ -64,7 +64,8 @@
     "angular": "<%- props.angularVersion %>"
   },
   "devDependencies": {
-    "angular-mocks": "<%- props.angularVersion %>"
+    "angular-mocks": "<%- props.angularVersion %>",
+    "angular-multimocks": "~0.6.2"
   },
 <% if (bowerOverrides !== null) { -%>
   "overrides": <%- bowerOverrides %>,

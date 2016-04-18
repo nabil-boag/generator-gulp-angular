@@ -60,3 +60,8 @@ gulp.task('inject', ['scripts'], function () {
     .pipe(wiredep(_.extend({}, conf.wiredep)))
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve')));
 });
+
+gulp.task('inject-dev', ['scripts', 'multimocks'], function () {
+  conf.wiredep.devDependencies = true;
+  gulp.start('inject');
+});
