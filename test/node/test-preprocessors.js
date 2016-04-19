@@ -39,12 +39,12 @@ describe('gulp-angular generator preprocessors script', function () {
       };
       generator.imageMin = true;
       generator.computeProcessedFileExtension();
-      generator.processedFileExtension.should.be.equal('html,css,js,jade,feature,jpg,png,gif,svg');
+      generator.processedFileExtension.should.be.equal('html,css,js,json,jade,feature,jpg,png,gif,svg');
 
       generator.props.protractorFramework.extension = 'js';
       generator.imageMin = false;
       generator.computeProcessedFileExtension();
-      generator.processedFileExtension.should.be.equal('html,css,js,jade');
+      generator.processedFileExtension.should.be.equal('html,css,js,json,jade');
     });
   });
 
@@ -56,7 +56,7 @@ describe('gulp-angular generator preprocessors script', function () {
       };
       generator.computeWatchTaskDeps();
       generator.watchTaskDeps.length.should.be.equal(1);
-      generator.watchTaskDeps[0].should.be.equal('\'inject\'');
+      generator.watchTaskDeps[0].should.be.equal('\'inject-dev\'');
     });
 
     it('should be inject, scripts:watch and markups when needed', function () {
@@ -68,7 +68,7 @@ describe('gulp-angular generator preprocessors script', function () {
       generator.watchTaskDeps.length.should.be.equal(3);
       generator.watchTaskDeps[0].should.be.equal('\'scripts:watch\'');
       generator.watchTaskDeps[1].should.be.equal('\'markups\'');
-      generator.watchTaskDeps[2].should.be.equal('\'inject\'');
+      generator.watchTaskDeps[2].should.be.equal('\'inject-dev\'');
     });
   });
 

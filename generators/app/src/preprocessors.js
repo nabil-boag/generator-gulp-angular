@@ -18,6 +18,7 @@ module.exports = function (GulpAngularGenerator) {
       'html',
       'css',
       'js',
+      'json',
       this.props.cssPreprocessor.extension,
       this.props.jsPreprocessor.extension,
       this.props.htmlPreprocessor.extension,

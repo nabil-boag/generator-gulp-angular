@@ -51,8 +51,8 @@
     "gulp-coffee": "~2.3.1",
     "gulp-coffeelint": "~0.5.0",
 <% } if (props.jsPreprocessor.srcExtension === 'es6' || props.jsPreprocessor.key === 'typescript') { -%>
-    "webpack-stream": "~2.1.1",
-    "ng-annotate-loader": "0.0.10",
+    "webpack-stream": "~3.1.0",
+    "ng-annotate-loader": "~0.1.0",
 <% } if (props.jsPreprocessor.srcExtension === 'es6') { -%>
     "eslint-loader": "~1.1.0",
 <% } if (props.jsPreprocessor.key === 'babel') { -%>
@@ -82,7 +82,7 @@
     "wiredep": "~2.2.2",
     "karma": "~0.13.10",
     "karma-jasmine": "~0.3.6",
-    "angular-multimocks": "~0.6.2",
+    "angular-multimocks": "~0.6.4",
 <% if (props.protractorFramework.key === 'cucumber') { -%>
     "cucumber": "~0.10.2",
     "protractor-cucumber-framework": "~0.5.0",
